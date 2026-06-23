@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoPulse | Next-Gen Sustainable Cities</title>
+    <title>EcoPulse | Next-Gen Sustainable Cities & Renders</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
@@ -13,8 +13,9 @@
         <div class="logo">ECO<span>PULSE</span></div>
         <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#catalogo">Catálogo</a>
+            <a href="#catalogo">Energías</a>
             <a href="#ciudades">Diseño Urbano</a>
+            <a href="#guias">Guía Comparativa</a>
             <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
         </nav>
     </header>
@@ -22,20 +23,20 @@
     <section id="inicio" class="hero-premium">
         <div class="hero-overlay"></div>
         <div class="hero-container">
-            <span class="hero-tag">SISTEMAS URBANOS 2026</span>
+            <span class="hero-tag">SISTEMAS URBANOS METROPOLITANOS</span>
             <h1 class="neon-title-green">CIUDADES <br><span class="neon-title-cyan">VIVAS</span></h1>
-            <p class="hero-text">Arquitectura ecológica de vanguardia y renders de energía renovable de alta fidelidad. Diseñados para humanos, construidos para el futuro.</p>
+            <p class="hero-text">Catálogo avanzado de modelado 3D, planos de ingeniería verde y simulaciones ambientales de alta fidelidad. Desarrollos listos para el sector inmobiliario sustentable.</p>
             <div class="hero-buttons">
-                <a href="#catalogo" class="btn-neon-green">Ver Catálogo Premium</a>
-                <a href="#ciudades" class="btn-neon-cyan">Explorar Renders</a>
+                <a href="#catalogo" class="btn-neon-green">Explorar Catálogo</a>
+                <a href="#ciudades" class="btn-neon-cyan">Ver Planos Maestros</a>
             </div>
         </div>
     </section>
 
     <section id="catalogo" class="catalog-section">
         <div class="section-header">
-            <h2 class="title-glow">ENERGÍAS RENOVABLES</h2>
-            <p class="subtitle">Haz clic en las imágenes para abrir la guía técnica y descubrir cuál te conviene.</p>
+            <h2 class="title-glow">1. MATRIZ ENERGÉTICA RENOVABLE</h2>
+            <p class="subtitle">Haz clic en cada imagen para desplegar el dossier técnico, precios y conveniencia.</p>
         </div>
 
         <div class="products-grid">
@@ -43,18 +44,45 @@
             <div class="premium-card">
                 <div class="card-img-container" onclick="toggleInfo('info1')">
                     <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80" alt="Panel Solar">
-                    <div class="img-overlay"><span>CLIC PARA VER DETALLES 🔍</span></div>
+                    <div class="img-overlay"><span>DESPLEGAR ESPECIFICACIONES 🔍</span></div>
                 </div>
                 <div class="card-body">
-                    <span class="price-tag">$450 USD</span>
+                    <span class="price-tag">$450 USD <small>/ Unidad de Fachada</small></span>
                     <h3>Módulo Solar Quantum-Glass</h3>
-                    <p class="short-desc">Fachadas fotovoltaicas translúcidas para edificios de alta densidad.</p>
+                    <p class="short-desc">Vidrio arquitectónico templado con celdas de silicio amorfo integradas para rascacielos.</p>
                     
                     <div id="info1" class="hidden-info">
                         <h4>¿Para qué sirve?</h4>
-                        <p>Sustituye los cristales convencionales de las ventanas de rascacielos, generando electricidad limpia directamente a partir de la luz solar sin arruinar la estética arquitectónica.</p>
+                        <p>Sustituye el acristalamiento convencional en muros cortina de edificios. Transforma la fachada del edificio en una planta de energía vertical sin alterar la transmisión de luz natural al interior.</p>
                         <h4>¿Cuál te conviene?</h4>
-                        <p><strong>Te conviene si:</strong> Tienes un proyecto con torres corporativas o fachadas expuestas al sol y buscas autosuficiencia energética con un diseño ultra-moderno.</p>
+                        <p><strong>Te conviene si:</strong> Estás diseñando torres corporativas de gran altura en zonas densas donde el espacio en la azotea es limitado pero las superficies laterales reciben alta radiación.</p>
+                        <h4>Especificaciones Técnicas</h4>
+                        <p>• Eficiencia: 22% por metro cuadrado.<br>• Formatos: Archivo .FBX, .MAX y texturas PBR listas para V-Ray/Lumion.</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn-add-cart" onclick="addToCart()">Adquirir Beneficio 🛒</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <div class="card-img-container" onclick="toggleInfo('infoPisos')">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80" alt="Pisos cinéticos">
+                    <div class="img-overlay"><span>DESPLEGAR ESPECIFICACIONES 🔍</span></div>
+                </div>
+                <div class="card-body">
+                    <span class="price-tag">$850 USD <small>/ Módulo de Red</small></span>
+                    <h3>Baldosas Piezoeléctricas EcoStep</h3>
+                    <p class="short-desc">Pavimento urbano inteligente que convierte las pisadas peatonales en energía eléctrica.</p>
+                    
+                    <div id="infoPisos" class="hidden-info">
+                        <h4>¿Para qué sirve?</h4>
+                        <p>Captura la energía mecánica generada por el caminar de las personas. Cada pisada produce micro-vatios que se almacenan en baterías locales para alimentar el alumbrado público y pantallas informativas.</p>
+                        <h4>¿Cuál te conviene?</h4>
+                        <p><strong>Te conviene si:</strong> Tu render o plano incluye zonas de alto flujo peatonal como estaciones de metro, centros comerciales, plazas públicas o avenidas principales.</p>
+                        <h4>Especificaciones Técnicas</h4>
+                        <p>• Rendimiento: 5W por pisada.<br>• Material: Caucho reciclado de alta resistencia y compuestos piezoeléctricos.</p>
                     </div>
 
                     <div class="card-footer">
@@ -66,18 +94,20 @@
             <div class="premium-card">
                 <div class="card-img-container" onclick="toggleInfo('info2')">
                     <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=600&q=80" alt="Turbina Eólica">
-                    <div class="img-overlay"><span>CLIC PARA VER DETALLES 🔍</span></div>
+                    <div class="img-overlay"><span>DESPLEGAR ESPECIFICACIONES 🔍</span></div>
                 </div>
                 <div class="card-body">
-                    <span class="price-tag">$1,200 USD</span>
-                    <h3>Turbina Micro-Eólica Helix</h3>
-                    <p class="short-desc">Generador eólico de eje vertical optimizado para vientos cruzados.</p>
+                    <span class="price-tag">$1,200 USD <small>/ Turbina Modulable</small></span>
+                    <h3>Aerogenerador Vertical Helix</h3>
+                    <p class="short-desc">Turbinas compactas helicoidales diseñadas para entornos urbanos de alta velocidad de viento.</p>
                     
                     <div id="info2" class="hidden-info">
                         <h4>¿Para qué sirve?</h4>
-                        <p>Captura corrientes de aire turbulentas entre edificios altos en entornos urbanos y las convierte en energía de flujo constante y silencioso.</p>
+                        <p>Aprovecha el "efecto túnel" (las corrientes de aire que se aceleran al pasar entre edificios altos). Al girar sobre un eje vertical, no requiere orientarse hacia el viento, operando de manera silenciosa y sin vibraciones.</p>
                         <h4>¿Cuál te conviene?</h4>
-                        <p><strong>Te conviene si:</strong> Tu render o diseño de ciudad se ubica en zonas costeras o corredores metropolitanos con ráfagas de viento constantes a gran altura.</p>
+                        <p><strong>Te conviene si:</strong> Desarrollas proyectos en cornisas de rascacielos, puentes urbanos o crestas topográficas propensas a vientos multidireccionales.</p>
+                        <h4>Especificaciones Técnicas</h4>
+                        <p>• Operación: Velocidad mínima de viento de 2 m/s.<br>• Render: Modelo animado en bucle cíclico para simulaciones de video.</p>
                     </div>
 
                     <div class="card-footer">
@@ -89,18 +119,20 @@
             <div class="premium-card">
                 <div class="card-img-container" onclick="toggleInfo('info3')">
                     <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=600&q=80" alt="Biorreactor">
-                    <div class="img-overlay"><span>CLIC PARA VER DETALLES 🔍</span></div>
+                    <div class="img-overlay"><span>DESPLEGAR ESPECIFICACIONES 🔍</span></div>
                 </div>
                 <div class="card-body">
-                    <span class="price-tag">$3,500 USD</span>
+                    <span class="price-tag">$3,500 USD <small>/ Columna Estructural</small></span>
                     <h3>Biorreactor Urbano Bioluminiscente</h3>
-                    <p class="short-desc">Columnas de microalgas vivas para absorción masiva de CO2.</p>
+                    <p class="short-desc">Columnas de cristal líquido con cultivos de microalgas fijadoras de carbono.</p>
                     
                     <div id="info3" class="hidden-info">
                         <h4>¿Para qué sirve?</h4>
-                        <p>Limpia el aire urbano 10 veces más rápido que los árboles comunes y emite un brillo verdoso fosforescente natural por las noches para iluminar ciclovías.</p>
+                        <p>Absorbe los gases contaminantes de los vehículos de forma masiva. Durante el día realiza fotosíntesis acelerada y de noche emite luz natural fosforescente verde, eliminando la necesidad de iluminación eléctrica externa.</p>
                         <h4>¿Cuál te conviene?</h4>
-                        <p><strong>Te conviene si:</strong> Diseñas plazas públicas inteligentes, paradas de autobús ecológicas o zonas de baja emisión que requieran un impacto visual inmediato.</p>
+                        <p><strong>Te conviene si:</strong> Diseñas paradas de transporte masivo, camellones de avenidas con alta congestión vehicular o plazas que busquen un hito visual ecológico.</p>
+                        <h4>Especificaciones Técnicas</h4>
+                        <p>• Absorción: Equivalente a 10 árboles maduros por columna.<br>• Iluminación: Autónoma mediante luciferina natural.</p>
                     </div>
 
                     <div class="card-footer">
@@ -114,26 +146,29 @@
 
     <section id="ciudades" class="cities-section">
         <div class="section-header">
-            <h2 class="title-glow-cyan">DISEÑO URBANO SUSTENTABLE</h2>
-            <p class="subtitle">Planos maestros interactivos y renders de distritos ecológicos.</p>
+            <h2 class="title-glow-cyan">2. INFRAESTRUCTURA Y URBANISMO REGENERATIVO</h2>
+            <p class="subtitle">Planos maestros completos, zonificación bioclimática y modelado de entornos macro.</p>
         </div>
 
         <div class="products-grid">
-            <div class="premium-card wide-card">
+            
+            <div class="premium-card">
                 <div class="card-img-container" onclick="toggleInfo('infoCiudad1')">
-                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1200&q=80" alt="Masterplan Ciudad">
-                    <div class="img-overlay"><span>VER PLAN MAESTRO INTEGRAL 🔍</span></div>
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=600&q=80" alt="Masterplan Ciudad">
+                    <div class="img-overlay"><span>VER PLAN DE ECO-DISTRITO 🔍</span></div>
                 </div>
                 <div class="card-body">
-                    <span class="price-tag">$8,900 USD</span>
-                    <h3>Render de Distrito Inteligente "Neo-Arcadia"</h3>
-                    <p class="short-desc">Diseño de infraestructura urbana circular con cero emisiones y movilidad peatonal optimizada.</p>
+                    <span class="price-tag">$8,900 USD <small>/ Licencia Comercial</small></span>
+                    <h3>Masterplan Urbano "Neo-Arcadia"</h3>
+                    <p class="short-desc">Diseño conceptual y técnico para distritos de uso mixto con movilidad peatonal y tejido verde.</p>
                     
                     <div id="infoCiudad1" class="hidden-info">
                         <h4>¿Para qué sirve?</h4>
-                        <p>Este render profesional sirve como propuesta base para desarrolladores inmobiliarios y gobiernos locales que buscan visualizar distritos comerciales totalmente sostenibles, integrando gestión inteligente del agua, reciclaje automatizado y redes eléctricas distribuidas.</p>
-                        <h4>¿Qué incluye el beneficio?</h4>
-                        <p>Archivos BIM/CAD editables, renders fotorrealistas en 8K, simulaciones de flujo de viento urbano y la licencia comercial completa para presentación de proyectos.</p>
+                        <p>Sirve como base de planeación urbana para maquetas digitales y concursos de arquitectura. Integra corredores de biodiversidad que regulan la temperatura de la ciudad, reduciendo el efecto de isla de calor urbana.</p>
+                        <h4>¿Cuál te conviene?</h4>
+                        <p><strong>Te conviene si:</strong> Tienes la encomienda de presentar un proyecto de desarrollo inmobiliario sustentable a inversionistas o instituciones gubernamentales.</p>
+                        <h4>¿Qué incluye?</h4>
+                        <p>• Modelado topográfico completo en 3D.<br>• Planos de zonificación y secciones viales.<br>• Renderizados fotorrealistas diurnos y nocturnos.</p>
                     </div>
 
                     <div class="card-footer">
@@ -141,6 +176,90 @@
                     </div>
                 </div>
             </div>
+
+            <div class="premium-card">
+                <div class="card-img-container" onclick="toggleInfo('infoCiudad2')">
+                    <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=600&q=80" alt="Distrito Flotante">
+                    <div class="img-overlay"><span>VER PLAN ANFIBIO 🔍</span></div>
+                </div>
+                <div class="card-body">
+                    <span class="price-tag">$14,500 USD <small>/ Proyecto Completo</small></span>
+                    <h3>Módulo de Ciudad Flotante "AuraMarina"</h3>
+                    <p class="short-desc">Diseño de plataformas modulares sustentables con gestión de agua integrada frente al cambio climático.</p>
+                    
+                    <div id="infoCiudad2" class="hidden-info">
+                        <h4>¿Para qué sirve?</h4>
+                        <p>Solución de vanguardia para la expansión urbana en cuerpos de agua o costas propensas a inundaciones. Cada módulo incluye desalinización solar pasiva, acuaponía y reciclaje de aguas grises integrado bajo las cubiertas.</p>
+                        <h4>¿Cuál te conviene?</h4>
+                        <p><strong>Te conviene si:</strong> Desarrollas propuestas de resiliencia climática para zonas costeras, proyectos turísticos de ultra-lujo ecológico o estudios de adaptación al aumento del nivel del mar.</p>
+                        <h4>¿Qué incluye?</h4>
+                        <p>• Planos estructurales de flotación hidráulica.<br>• Animación en 3D del comportamiento del oleaje.<br>• Análisis de ciclo de vida de los materiales.</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn-add-cart" onclick="addToCart()">Adquirir Beneficio 🛒</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="guias" class="guias-section">
+        <div class="section-header">
+            <h2 class="title-glow">3. GUÍA COMPARATIVA INTERACTIVA</h2>
+            <p class="subtitle">Analiza rápidamente qué solución se adapta al presupuesto y objetivos de tu desarrollo sustentable.</p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tecnología / Diseño</th>
+                        <th>Inversión Base</th>
+                        <th>Impacto Ambiental</th>
+                        <th>Ubicación Ideal</th>
+                        <th>¿Por qué elegirlo?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tech-name">Quantum-Glass</td>
+                        <td>$450 USD</td>
+                        <td><span class="tag-low">Moderado</span></td>
+                        <td>Fachadas de Edificios</td>
+                        <td>Aprovecha superficies verticales muertas para generar energía continua.</td>
+                    </tr>
+                    <tr>
+                        <td class="tech-name">EcoStep Pavimentos</td>
+                        <td>$850 USD</td>
+                        <td><span class="tag-low">Moderado</span></td>
+                        <td>Andadores y Metros</td>
+                        <td>Involucra a la comunidad directamente en la generación sustentable.</td>
+                    </tr>
+                    <tr>
+                        <td class="tech-name">Turbinas Helix</td>
+                        <td>$1,200 USD</td>
+                        <td><span class="tag-med">Alto</span></td>
+                        <td>Azoteas y Corredores</td>
+                        <td>Funciona de noche o en días nublados donde los paneles solares fallan.</td>
+                    </tr>
+                    <tr>
+                        <td class="tech-name">Biorreactor Microalgas</td>
+                        <td>$3,500 USD</td>
+                        <td><span class="tag-high">Extremo</span></td>
+                        <td>Plazas e Intersecciones</td>
+                        <td>Limpia el aire localmente y provee estética neón fosforescente única.</td>
+                    </tr>
+                    <tr>
+                        <td class="tech-name">Masterplan Neo-Arcadia</td>
+                        <td>$8,900 USD</td>
+                        <td><span class="tag-high">Macro-Impacto</span></td>
+                        <td>Zonas Urbanas Nuevas</td>
+                        <td>Reestructura por completo la movilidad y la habitabilidad humana.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
