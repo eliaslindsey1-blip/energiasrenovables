@@ -21,7 +21,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Encabezado y Navegación */
+/* Encabezado */
 header {
     display: flex;
     justify-content: space-between;
@@ -31,7 +31,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(5, 8, 17, 0.75);
+    background: rgba(5, 8, 17, 0.8);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -40,7 +40,6 @@ header {
     font-family: 'Syncopate', sans-serif;
     font-size: 20px;
     letter-spacing: 3px;
-    font-weight: 700;
 }
 
 .logo span {
@@ -70,14 +69,14 @@ nav a:hover {
     border: 1px solid rgba(0, 243, 255, 0.2);
 }
 
-/* Inicio Impactante (WOW Effect) */
+/* Hero Section */
 .hero-premium {
     height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 8%;
     position: relative;
-    background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80'); /* Fondo sutil de montaña o naturaleza tecnológica */
+    background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
 }
@@ -101,7 +100,7 @@ nav a:hover {
 .hero-tag {
     color: var(--neon-cyan);
     font-family: 'Syncopate', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 4px;
     display: block;
     margin-bottom: 15px;
@@ -111,13 +110,11 @@ nav a:hover {
     font-family: 'Syncopate', sans-serif;
     font-size: 4.5rem;
     line-height: 1.1;
-    color: var(--text-white);
-    font-weight: 700;
 }
 
 .neon-title-cyan {
     color: var(--neon-green);
-    text-shadow: 0 0 30px rgba(57, 255, 20, 0.8), 0 0 60px rgba(57, 255, 20, 0.4);
+    text-shadow: 0 0 30px rgba(57, 255, 20, 0.8);
 }
 
 .hero-text {
@@ -125,10 +122,8 @@ nav a:hover {
     font-size: 1.25rem;
     margin-top: 25px;
     margin-bottom: 40px;
-    max-width: 600px;
 }
 
-/* Botones Neón Premium */
 .btn-neon-green, .btn-neon-cyan {
     font-family: 'Syncopate', sans-serif;
     font-size: 11px;
@@ -139,7 +134,7 @@ nav a:hover {
     border-radius: 4px;
     display: inline-block;
     margin-right: 20px;
-    transition: 0.3s all ease;
+    transition: 0.3s;
 }
 
 .btn-neon-green {
@@ -156,7 +151,6 @@ nav a:hover {
 .btn-neon-cyan {
     border: 2px solid var(--neon-cyan);
     color: var(--neon-cyan);
-    background: transparent;
 }
 
 .btn-neon-cyan:hover {
@@ -165,21 +159,19 @@ nav a:hover {
     box-shadow: 0 0 25px var(--neon-cyan);
 }
 
-/* Secciones de Catálogo */
-.catalog-section, .cities-section {
-    padding: 120px 8%;
+/* Grids y Tarjetas */
+.catalog-section, .cities-section, .guias-section {
+    padding: 100px 8%;
     background: var(--bg-black);
 }
 
 .section-header {
     margin-bottom: 60px;
-    text-align: left;
 }
 
 .title-glow {
     font-family: 'Syncopate', sans-serif;
     font-size: 2.2rem;
-    color: var(--text-white);
     border-left: 4px solid var(--neon-green);
     padding-left: 20px;
     margin-bottom: 15px;
@@ -188,7 +180,6 @@ nav a:hover {
 .title-glow-cyan {
     font-family: 'Syncopate', sans-serif;
     font-size: 2.2rem;
-    color: var(--text-white);
     border-left: 4px solid var(--neon-cyan);
     padding-left: 20px;
     margin-bottom: 15px;
@@ -197,13 +188,11 @@ nav a:hover {
 .subtitle {
     color: var(--text-slate);
     font-size: 1.1rem;
-    margin-left: 24px;
 }
 
-/* Tarjetas e Interactividad de Imágenes */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 40px;
 }
 
@@ -212,31 +201,24 @@ nav a:hover {
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.03);
-    transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: 0.4s ease;
 }
 
 .premium-card:hover {
     transform: translateY(-8px);
     border-color: rgba(0, 243, 255, 0.4);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .card-img-container {
     position: relative;
     height: 250px;
     cursor: pointer;
-    overflow: hidden;
 }
 
 .card-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.5s;
-}
-
-.premium-card:hover .card-img-container img {
-    scale: 1.05;
 }
 
 .img-overlay {
@@ -245,7 +227,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(5, 8, 17, 0.7);
+    background: rgba(5, 8, 17, 0.85);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,7 +245,6 @@ nav a:hover {
     color: var(--neon-cyan);
     border: 1px solid var(--neon-cyan);
     padding: 10px 20px;
-    border-radius: 4px;
 }
 
 .card-body {
@@ -274,15 +255,18 @@ nav a:hover {
     font-family: 'Syncopate', sans-serif;
     color: var(--neon-green);
     font-size: 1.2rem;
-    font-weight: 700;
-    display: block;
     margin-bottom: 10px;
+    display: block;
+}
+
+.price-tag small {
+    font-size: 0.75rem;
+    color: var(--text-slate);
 }
 
 .card-body h3 {
     font-size: 1.4rem;
     margin-bottom: 12px;
-    font-weight: 700;
 }
 
 .short-desc {
@@ -291,25 +275,20 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-/* Caja de Información Oculta que abre al hacer Clic */
+/* Caja de información interactiva */
 .hidden-info {
     display: none;
-    background: rgba(5, 8, 17, 0.6);
+    background: rgba(5, 8, 17, 0.8);
     padding: 20px;
     border-radius: 6px;
     margin-bottom: 20px;
     border-left: 2px solid var(--neon-cyan);
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 .hidden-info h4 {
     color: var(--neon-cyan);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    margin-top: 10px;
     margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -318,10 +297,9 @@ nav a:hover {
 .hidden-info p {
     font-size: 0.9rem;
     color: #cbd5e1;
-    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
-/* Botón de Comprar / Adquirir Beneficios */
 .btn-add-cart {
     width: 100%;
     background: transparent;
@@ -331,8 +309,6 @@ nav a:hover {
     font-family: 'Syncopate', sans-serif;
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: 1px;
-    border-radius: 4px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -343,14 +319,53 @@ nav a:hover {
     box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
 }
 
-.wide-card {
-    grid-column: 1 / -1;
+/* Tabla Comparativa */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 40px;
+    background: var(--bg-dark-gray);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+th {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--neon-cyan);
+    background: rgba(0, 243, 255, 0.03);
+}
+
+.tech-name {
+    font-weight: 700;
+    color: var(--text-white);
+}
+
+.tag-low, .tag-med, .tag-high {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.tag-low { background: rgba(255,255,255,0.1); color: #fff; }
+.tag-med { background: rgba(0, 243, 255, 0.1); color: var(--neon-cyan); }
+.tag-high { background: rgba(57, 255, 20, 0.1); color: var(--neon-green); }
 
 footer {
     text-align: center;
     padding: 40px;
     color: var(--text-slate);
     border-top: 1px solid rgba(255, 255, 255, 0.02);
-    font-size: 0.9rem;
 }
