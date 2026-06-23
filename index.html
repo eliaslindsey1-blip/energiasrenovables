@@ -3,83 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoPulse | Ciudades Sustentables & Energía Renovable</title>
+    <title>EcoPulse | Next-Gen Sustainable Cities</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <div class="logo">Eco<span>Pulse</span></div>
+        <div class="logo">ECO<span>PULSE</span></div>
         <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#productos">Guía de Productos</a>
-            <a href="#render">Diseño Urbano</a>
-            <a href="#contacto" class="btn-nav">Contacto</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#ciudades">Diseño Urbano</a>
+            <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
         </nav>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Energía del Futuro, <br><span class="neon-text">Ciudades Vivas</span></h1>
-            <p>Modelados avanzados de arquitectura sustentable y sistemas de energía limpia listos para implementar.</p>
-            <a href="#productos" class="btn-main">Explorar Catálogo</a>
+    <section id="inicio" class="hero-premium">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <span class="hero-tag">SISTEMAS URBANOS 2026</span>
+            <h1 class="neon-title-green">CIUDADES <br><span class="neon-title-cyan">VIVAS</span></h1>
+            <p class="hero-text">Arquitectura ecológica de vanguardia y renders de energía renovable de alta fidelidad. Diseñados para humanos, construidos para el futuro.</p>
+            <div class="hero-buttons">
+                <a href="#catalogo" class="btn-neon-green">Ver Catálogo Premium</a>
+                <a href="#ciudades" class="btn-neon-cyan">Explorar Renders</a>
+            </div>
         </div>
     </section>
 
-    <section id="productos" class="products-section">
-        <h2 class="section-title">Guía de Soluciones Sustentables</h2>
-        <p class="section-subtitle">Haz clic en cada módulo para integrar a tu render urbano.</p>
-        
+    <section id="catalogo" class="catalog-section">
+        <div class="section-header">
+            <h2 class="title-glow">ENERGÍAS RENOVABLES</h2>
+            <p class="subtitle">Haz clic en las imágenes para abrir la guía técnica y descubrir cuál te conviene.</p>
+        </div>
+
         <div class="products-grid">
-            <div class="product-card">
-                <div class="badge-tech">RENDER DISPONIBLE</div>
-                <h3>Células Fotovoltaicas Quantum</h3>
-                <p>Paneles solares de alta eficiencia con acabado estético transparente para fachadas de edificios inteligentes.</p>
-                <div class="tech-specs">
-                    <span>Eficiencia: 28%</span>
-                    <span>Formato: .OBJ / .FBX</span>
+            
+            <div class="premium-card">
+                <div class="card-img-container" onclick="toggleInfo('info1')">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80" alt="Panel Solar">
+                    <div class="img-overlay"><span>CLIC PARA VER DETALLES 🔍</span></div>
                 </div>
-                <button class="btn-buy">Adquirir Licencia</button>
+                <div class="card-body">
+                    <span class="price-tag">$450 USD</span>
+                    <h3>Módulo Solar Quantum-Glass</h3>
+                    <p class="short-desc">Fachadas fotovoltaicas translúcidas para edificios de alta densidad.</p>
+                    
+                    <div id="info1" class="hidden-info">
+                        <h4>¿Para qué sirve?</h4>
+                        <p>Sustituye los cristales convencionales de las ventanas de rascacielos, generando electricidad limpia directamente a partir de la luz solar sin arruinar la estética arquitectónica.</p>
+                        <h4>¿Cuál te conviene?</h4>
+                        <p><strong>Te conviene si:</strong> Tienes un proyecto con torres corporativas o fachadas expuestas al sol y buscas autosuficiencia energética con un diseño ultra-moderno.</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn-add-cart" onclick="addToCart()">Adquirir Beneficio 🛒</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="product-card">
-                <div class="badge-tech">URBANISMO</div>
-                <h3>Domo de Microalgas</h3>
-                <p>Sistemas de purificación de aire urbana mediante biorreactores integrados en paradas de autobús y plazas.</p>
-                <div class="tech-specs">
-                    <span>CO2 Absorbido: Alto</span>
-                    <span>Escala: 1:1</span>
+            <div class="premium-card">
+                <div class="card-img-container" onclick="toggleInfo('info2')">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=600&q=80" alt="Turbina Eólica">
+                    <div class="img-overlay"><span>CLIC PARA VER DETALLES 🔍</span></div>
                 </div>
-                <button class="btn-buy">Adquirir Licencia</button>
+                <div class="card-body">
+                    <span class="price-tag">$1,200 USD</span>
+                    <h3>Turbina Micro-Eólica Helix</h3>
+                    <p class="short-desc">Generador eólico de eje vertical optimizado para vientos cruzados.</p>
+                    
+                    <div id="info2" class="hidden-info">
+                        <h4>¿Para qué sirve?</h4>
+                        <p>Captura corrientes de aire turbulentas entre edificios altos en entornos urbanos y las convierte en energía de flujo constante y silencioso.</p>
+                        <h4>¿Cuál te conviene?</h4>
+                        <p><strong>Te conviene si:</strong> Tu render o diseño de ciudad se ubica en zonas costeras o corredores metropolitanos con ráfagas de viento constantes a gran altura.</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn-add-cart" onclick="addToCart()">Adquirir Beneficio 🛒</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="product-card">
-                <div class="badge-tech">ENERGÍA</div>
-                <h3>Turbina Eólica Vertical</h3>
-                <p>Generadores eólicos silenciosos optimizados para corrientes de aire entre rascacielos urbanos.</p>
-                <div class="tech-specs">
-                    <span>Potencia: 15kW</span>
-                    <span>Animado: Sí</span>
+            <div class="premium-card">
+                <div class="card-img-container" onclick="toggleInfo('info3')">
+                    <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=600&q=80" alt="Biorreactor">
+                    <div class="img-overlay"><span>CLIC PARA VER DETALLES 🔍</span></div>
                 </div>
-                <button class="btn-buy">Adquirir Licencia</button>
+                <div class="card-body">
+                    <span class="price-tag">$3,500 USD</span>
+                    <h3>Biorreactor Urbano Bioluminiscente</h3>
+                    <p class="short-desc">Columnas de microalgas vivas para absorción masiva de CO2.</p>
+                    
+                    <div id="info3" class="hidden-info">
+                        <h4>¿Para qué sirve?</h4>
+                        <p>Limpia el aire urbano 10 veces más rápido que los árboles comunes y emite un brillo verdoso fosforescente natural por las noches para iluminar ciclovías.</p>
+                        <h4>¿Cuál te conviene?</h4>
+                        <p><strong>Te conviene si:</strong> Diseñas plazas públicas inteligentes, paradas de autobús ecológicas o zonas de baja emisión que requieran un impacto visual inmediato.</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn-add-cart" onclick="addToCart()">Adquirir Beneficio 🛒</button>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <section id="render" class="render-section">
-        <div class="render-container">
-            <h2>Visiones de Ciudades Sustentables</h2>
-            <p>Nuestros diseños combinan naturaleza y tecnología de punta. Aquí puedes colocar los renders o imágenes de tus proyectos.</p>
-            <div class="placeholder-render">
-                <p>[ Espacio para el Render en Alta Definición de tu Ciudad Sustentable ]</p>
+    <section id="ciudades" class="cities-section">
+        <div class="section-header">
+            <h2 class="title-glow-cyan">DISEÑO URBANO SUSTENTABLE</h2>
+            <p class="subtitle">Planos maestros interactivos y renders de distritos ecológicos.</p>
+        </div>
+
+        <div class="products-grid">
+            <div class="premium-card wide-card">
+                <div class="card-img-container" onclick="toggleInfo('infoCiudad1')">
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1200&q=80" alt="Masterplan Ciudad">
+                    <div class="img-overlay"><span>VER PLAN MAESTRO INTEGRAL 🔍</span></div>
+                </div>
+                <div class="card-body">
+                    <span class="price-tag">$8,900 USD</span>
+                    <h3>Render de Distrito Inteligente "Neo-Arcadia"</h3>
+                    <p class="short-desc">Diseño de infraestructura urbana circular con cero emisiones y movilidad peatonal optimizada.</p>
+                    
+                    <div id="infoCiudad1" class="hidden-info">
+                        <h4>¿Para qué sirve?</h4>
+                        <p>Este render profesional sirve como propuesta base para desarrolladores inmobiliarios y gobiernos locales que buscan visualizar distritos comerciales totalmente sostenibles, integrando gestión inteligente del agua, reciclaje automatizado y redes eléctricas distribuidas.</p>
+                        <h4>¿Qué incluye el beneficio?</h4>
+                        <p>Archivos BIM/CAD editables, renders fotorrealistas en 8K, simulaciones de flujo de viento urbano y la licencia comercial completa para presentación de proyectos.</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn-add-cart" onclick="addToCart()">Adquirir Beneficio 🛒</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 EcoPulse Labs. Diseñado para el mañana urbano.</p>
+        <p>&copy; 2026 EcoPulse Global. Innovación humana y diseño de vanguardia.</p>
     </footer>
 
+    <script>
+        function toggleInfo(id) {
+            const infoBox = document.getElementById(id);
+            if (infoBox.style.display === "block") {
+                infoBox.style.display = "none";
+            } else {
+                infoBox.style.display = "block";
+            }
+        }
+
+        let totalItems = 0;
+        function addToCart() {
+            totalItems++;
+            document.getElementById('cart-count').innerText = totalItems;
+            alert("¡Excelente elección! El beneficio de este render sustentable ha sido añadido al carrito.");
+        }
+    </script>
 </body>
 </html>
